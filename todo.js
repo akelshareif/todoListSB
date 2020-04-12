@@ -32,10 +32,12 @@ if (localStorage.length > 0) {
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // stores task in localStorage
-    localStorage.setItem(todoInput.value, todoInput.value);
-    // reads from local storage then builds list items with the data
-    liBuilder(localStorage.getItem(todoInput.value));
+    if (todoInput.value !== '') {
+        // stores task in localStorage
+        localStorage.setItem(todoInput.value, todoInput.value);
+        // reads from local storage then builds list items with the data
+        liBuilder(localStorage.getItem(todoInput.value));
+    }
 });
 
 removeSelectionBtn.addEventListener('click', function () {
