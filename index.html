@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo List</title>
+        <link href="./todo.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Todo List</h1>
+        <div id="todoApp">
+            <form>
+                <!-- <label for="todo">Add Task: </label> -->
+                <input type="text" name="todo" placeholder="Add a Task" />
+                <button id="addBtn">Add</button>
+            </form>
+            <hr />
+            <div id="selectionOptions">
+                <span id="checkboxSelection">
+                    <label for="selectAll">Select All:</label>
+                    <input type="checkbox" name="selectAll" />
+                </span>
+                <span id="options">
+                    <button id="completed" class="options">
+                        Mark/Unmark As Completed
+                    </button>
+                    <button id="removeSelection" class="options">
+                        Remove Selected
+                    </button>
+                </span>
+            </div>
+            <hr />
+            <ul></ul>
+        </div>
+        <script src="./todo.js"></script>
+    </body>
+</html>
